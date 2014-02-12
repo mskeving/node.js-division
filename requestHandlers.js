@@ -11,8 +11,9 @@ function start(response, postData){
      '</head>'+
      '<body>'+
      '<form action="/upload" method="post">'+
-     '<textarea name="text" rows="20" cols="60"></textarea>'+
-     '<input type="submit" value="Submit text" />'+
+     '<textarea name="text" rows="1" cols="5"></textarea>'+
+     '<textarea name="text" rows="1" cols="5"></textarea>'+
+     '<input type="submit" value="divide" />'+
      '</form>'+
      '</body>'+
      '</html>';
@@ -25,7 +26,14 @@ function start(response, postData){
 function upload(response, postData) {
     console.log("Request handler 'upoad' was called.");
     response.writeHead(200, {'Content-Type': 'text.plain'});
-    response.write('you\'ve sent:' + querystring.parse(postData).text);
+    responseText = querystring.parse(postData).text;
+    
+    if (isNaN(responseText[0]) || isNaN(responseText[1])){
+        response.write('only numbers please!');
+    } else {
+    response.write('you submitted: ' + responseText[0] +
+        ' and ' + responseText[1]);
+    }
     response.end();
 }
 
