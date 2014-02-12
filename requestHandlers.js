@@ -10,7 +10,7 @@ function start(response, postData){
      'charset=UTF-8" />'+
      '</head>'+
      '<body>'+
-     '<form action="/upload" method="post">'+
+     '<form action="/display" method="post">'+
      '<textarea name="text" rows="1" cols="5"></textarea>'+
      '<textarea name="text" rows="1" cols="5"></textarea>'+
      '<input type="submit" value="divide" />'+
