@@ -1,6 +1,6 @@
 var divide = function() {
-    numerator = document.getElementById('num').value;
-    denomenator = document.getElementById('den').value;
+    numerator = $('#num').val();
+    denomenator = $('#den').val();
 
     if (isNaN(numerator) || isNaN(denomenator)) {
         warning('You entered a non valid number');
@@ -9,7 +9,7 @@ var divide = function() {
     } else {
         quotient = numerator/denomenator;
         console.log(quotient);
-        document.getElementById('result').innerHTML = quotient;
+        $('#result').text(quotient);
     }
 }
 
