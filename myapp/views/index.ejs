@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type='text/javascript' src='/javascripts/division.js'></script>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <form method='post'>
+        <textarea name='text1' id='num' rows='1' cols='5'></textarea>
+        <textarea name='text2' id='den' rows='1' cols='5'></textarea>
+        <input type='button' onclick='divide()' value='divide'/>
+    </form>
+    <div>
+        <p id='result'><p>
+    </div>
+  </body>
+
+
+</html>
