@@ -11,6 +11,21 @@ var divide = function() {
         console.log(quotient);
         $('#result').text(quotient);
     }
+    $.ajax({
+        url:'/divider',
+        type: 'POST',
+        dataType: 'json',
+        data: {'numerator': numerator,
+            'denomenator': denomenator},
+        contesntType: 'application/json',
+        success: function(data){
+            console.log(data);
+            console.log('YAY');
+        },
+        error: function() {
+            console.log('fail');
+        }
+    });
 }
 
 function warning(msg) {

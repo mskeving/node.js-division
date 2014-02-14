@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>The Divider</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <script type='text/javascript' src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
     <script type='text/javascript' src='/javascripts/division.js'></script>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <h1>The Divider</h1>
     <form method='post'>
-        <textarea name='text1' id='num' rows='1' cols='5'></textarea>
-        <textarea name='text2' id='den' rows='1' cols='5'></textarea>
-        <input type='button' onclick='divide()' value='divide'/>
+        <div id='math'>
+            <input type='text' name='text1' id='num' rows='1' cols='3'></textarea>
+            /
+            <input type='text' name='text2' id='den' rows='1' cols='3'></textarea>
+            <input type='button' class='btn btn-success' id='equal-btn' onclick='divide()' value='='/>
+            <div id='equals'>
+            </div>
+        </div>
     </form>
     <div>
         <p id='result'><p>
