@@ -8,10 +8,10 @@ exports.index = function(req, res){
 };
 
 exports.divider = function(req, res){
-    var numerator = parseInt(JSON.stringify(req.body.numerator);
-    var denomenator = parseInt(JSON.stringify(req.body.denomenator);
- 
-    console.log('numerator: ' + JSON.stringify(req.body.numerator));
-    console.log('denomenator: ' + JSON.stringify(req.body.denomenator));
-    res.send(req.body);
+    var numerator = parseInt(req.body.numerator);
+    var denomenator = parseInt(req.body.denomenator);
+    var quotient = numerator/denomenator; 
+
+    res.contentType('json');
+    res.send({'quotient': quotient});
 }

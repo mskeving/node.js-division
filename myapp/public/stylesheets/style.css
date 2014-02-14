@@ -5,3 +5,10 @@ body {
 a {
   color: #00b7ff;
 }
+#result-div {
+    margin-left: 15px;
+    display: inline-block;
+}
+#warning {
+    color: red;
+}
